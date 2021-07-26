@@ -1,0 +1,10 @@
+services:
+  mysql:
+    container_name: mysql
+    hostname: mysql
+    image: mysql:8.0.26
+    environment:
+      MYSQL_DATABASE: live2
+      MYSQL_ROOT_PASSWORD: 2655
+    ports:
+      - "127.0.0.1:3306:3306"
