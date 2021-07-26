@@ -3,7 +3,6 @@ package com.example.controller;
 
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -12,7 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -40,10 +38,9 @@ public class HomeController {
 	}
 	
 	@GetMapping("/name")
-	public Training getCenterName()
+	public List<String> getCenterName()
 	{
-		Optional<Training> t2= t3.getAllName();
-		return t2.get();
+		return t3.getAllName();
 	}
 	
 //	@GetMapping("/{id}")
