@@ -13,6 +13,6 @@ import com.example.entity.Training;
 public interface TrainingRepository extends JpaRepository<Training,Long>{
 	
 	@Query(value="select center_name from training",nativeQuery=true)
-	public Optional<Training> getAllName();
+	public List<String> getAllName();
 
 }
